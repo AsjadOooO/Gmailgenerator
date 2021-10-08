@@ -1,6 +1,6 @@
 # Fake Gmail Generator
 This is an Gmail generator using the dot tric
-[Fake Gmail Generator Link](https://asjadowo.github.io/Gmailgenerator/)
+[Fake Gmail Generator Link](https://asjadoooo.github.io/Gmailgenerator/)
 
 # Features 
 You can create over 
