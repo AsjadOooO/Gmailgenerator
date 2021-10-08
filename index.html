@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fake Gmail Generatorr</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://media.discordapp.net/attachments/841744227096068117/888344646185521162/Gmail-Logo.png?width=1038&height=584">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+  background-image: url("s.jpg") 
+}
+
+
+</style>
+
+
+
+<body>
+    <main role="main" class="container">
+       
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top navbar-dark bg-dark fixed-top">
+
+                        <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> <a class="navbar-brand" href="https://www.asjadowo.xyz/">Fake Gmail Generator</a>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">Home  <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="starter-template">
+                        <h1>Fake Gmail dot generator</h1>
+                        <p>
+                        	With <strong>Fake Gmail dot generator</strong>generate multiple new gmail addresses to link to your Google account. so can redirect the gmail to your main gmail account <strong>we do not store your email</strong> 
+                        </p>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="username" class="form-control" placeholder="asjad@gmail.com" aria-label="asjad@gmail.com" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn  btn-primary " type="button" id="generate"> <i class="fas fa-cog"></i> Generate</button>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="emails">Email goes here</label>
+                                    <label for="emails" id="counter" class="float-right">Generated Emails: 0</label>
+                                    <textarea class="form-control" id="emails" rows="16"></textarea>
+                             
+                           
+                                    
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    
+    <script>
+let counterLabel=document.getElementById("counter"),count=0,username=document.getElementById("username").value;function*generate(e){if(e.length<=1)yield e;else{let t=e[0],n=e.slice(1);for(let e of generate(n))yield t+e,yield t+"."+e}}function updateEmails(e){document.getElementById("emails").value="",count=0;let t=new Date;for(let t of generate(e))document.getElementById("emails").value+=t+"@gmail.com\r\n",count+=1,counterLabel.innerText="Generated: "+count;document.getElementById("emails").value=document.getElementById("emails").value.slice(0,-1);new Date}document.getElementById("generate").onclick=function(){let e=document.getElementById("username").value,t=document.getElementById("username").value;/@gmail\.com$/.test(t)?username!==e&&(username=e.split("@gmail.com")[0].replace(/[^a-zA-Z0-9]/g,""),console.log(username),username.length>1&&setTimeout(updateEmails(username),150)):alert("Please enter a valid Email Address")},document.getElementById("save").onclick=function(){blob=new Blob([document.getElementById("emails").value],{type:"text/plain;charset=utf-8",endings:"transparent"}),FileSaver.saveAs(blob,document.getElementById("username").value+".txt")};
+
+
+
+    </script>
+</body>
+
+</html>
